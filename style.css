@@ -1,0 +1,56 @@
+body, input, button {
+    font-family: monospace;
+}
+header {
+    padding: 15px;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: linear-gradient( to bottom right, #38FBEF , #5BAFFC);
+    box-shadow: 0 2px 4px rgba(44,62,80,0,15);
+    border-radius: 0 0 10px 10px;
+
+}
+header input {
+    width: 100%;
+    height: 50px;
+    float: left;
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: 400;
+    padding: 0 60px 0 0 ;
+    text-indent: 20px;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    border-radius: 5px 25px 25px 5px;
+    color: white;
+}
+header input::placeholder {
+    color: rgba(78, 80, 115, 0.561);
+}
+header button {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    border-radius: 25px;
+    background-color: white;
+    cursor: pointer;
+    border: #5BAFFC;
+}
+header button svg {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin:  -8px 0 0 -8px;
+}
+header button svg .fill {
+    fill:#5BAFFC
+}
