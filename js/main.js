@@ -10,6 +10,14 @@ document.getElementById('add').addEventListener('click', function() {
     };
 })
 
+function removeItem() {
+    let item = this.parentNode.parentNode;
+    let parent = item.parentNode;
+
+    parent.removeChild(item);
+
+}
+
 // adds a new item to the todo list
 function addItemTodo(text) {
     let list = document.getElementById('todo');
@@ -23,6 +31,9 @@ function addItemTodo(text) {
     let remove = document.createElement('button');
     remove.classList.add('remove');
     remove.innerHTML = removeSvg;
+
+    // add click event for removing item
+    remove.addEventListener('click', removeItem);
 
     let completed = document.createElement('button');
     completed.classList.add('completed');
