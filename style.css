@@ -1,6 +1,6 @@
 body {
     background-color: #edf0f1;
-    margin: 80px 0 0 0 ;
+    padding: 80px 0 0 0 ;
 }
 body, input, button {
     font-family: monospace;
@@ -74,11 +74,13 @@ header button svg .fill {
     width: 100%;
     float: left;
     padding: 15px;
+
 }
 
 ul.todo {
     width: 100%;
     float: left;
+    
 }
 ul.todo li {
     width: 100%;
@@ -136,18 +138,18 @@ ul.todo li .buttons button svg {
     left: 50%;
     margin: -11px 0 0 -11px;
 }
-ul.todo#completed li .buttons button.completed svg {
+ul.todo#completed li .buttons button.complete svg {
     background-color: #5BAFFC;
     border: 0px;
     transition: background-color 0.2s ease;
 }
-ul.todo:not(#completed) li .buttons button.completed:hover svg {
+ul.todo:not(#completed) li .buttons button.complete:hover svg {
     background-color: #5baefc4f;
 } 
-ul.todo:not(#completed) li .buttons button.completed:hover svg .fill {
+ul.todo:not(#completed) li .buttons button.complete:hover svg .fill {
     fill: #fff;
 }
-ul.todo#completed li .buttons button.completed svg .fill {
+ul.todo#completed li .buttons button.complete svg .fill {
     fill: #fff;
 }
 ul.todo li .buttons button svg .fill {
@@ -159,10 +161,24 @@ ul.todo li .buttons button.remove svg .fill {
 ul.todo li .buttons button.remove:hover svg .fill {
     fill: #e85656;
 }
-ul.todo li .buttons button.completed svg {
+ul.todo li .buttons button.complete svg {
     border-radius: 11px;
     border: 1.5px solid #5BAFFC;
 }
-ul.todo li .buttons button.completed svg .fill {
+ul.todo li .buttons button.complete svg .fill {
     fill: #5BAFFC;
+}
+ul.todo#completed:not(:empty) {
+    position: relative;
+    padding: 60px 0 0 0 ;
+}
+ul.todo#completed:not(:empty)::before {
+    content: '';
+    width: 150px;
+    height: 1px;
+    background-color: #5baefc41;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    margin: 0 0 0 -75px;
 }
